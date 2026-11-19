@@ -1,48 +1,136 @@
 # RTL-AutoBench ⚡
-> Autonomous Pre-Silicon Hardware Verification & Testbench Generator
+> Autonomous Pre-Silicon Hardware Verification Suite & Testbench Synthesizer
 
 [![Verification Suite](https://img.shields.io/badge/verification-passed-brightgreen.svg)]()
 [![SystemVerilog](https://img.shields.io/badge/standard-IEEE%201800-blue.svg)]()
-[![EDA](https://img.shields.io/badge/eda-verilator%20%7C%20iverilog%20%7C%20yosys-orange.svg)]()
-[![Mode](https://img.shields.io/badge/mode-autonomous%20live%20watch-purple.svg)]()
+[![EDA](https://img.shields.io/badge/eda-verilator%20%7C%20iverilog%20%7C%20yosys%20%7C%20nextpnr-orange.svg)]()
+[![Release](https://img.shields.io/badge/release-v1.0.0-purple.svg)](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.0)
 
-`RTL-AutoBench` is an enterprise-grade autonomous pre-silicon verification engine designed for fabless semiconductor teams and chip designers. **Give it any Verilog or SystemVerilog hardware source code, and it automatically synthesizes a complete, cycle-accurate, self-checking testbench.**
+`RTL-AutoBench` is an enterprise-grade autonomous pre-silicon verification and physical synthesis tool. **Feed it any Verilog or SystemVerilog hardware source code, and with a single command it synthesizes self-checking testbenches, runs dual-engine simulations (Verilator + Icarus), performs Yosys logic synthesis, and executes NextPnR FPGA placement & Static Timing Analysis (STA).**
 
 ---
 
-## ⚡ 1. Generate a Testbench for ANY Source File (`gen-tb`)
+## 🚀 Quickstart: Download & Activate
 
-If you have any Verilog module (e.g. `my_alu.sv`, `riscv_core.v`, `uart.v`), run:
+### Step 1: Install EDA Engines (Prerequisites)
+RTL-AutoBench leverages open-source silicon EDA tools for simulation and synthesis:
+
+- **macOS (Homebrew):**
+  ```bash
+  brew install iverilog verilator yosys
+  ```
+- **Ubuntu / Debian:**
+  ```bash
+  sudo apt update && sudo apt install -y iverilog verilator yosys
+  ```
+
+---
+
+### Step 2: Download & Install RTL-AutoBench
+
+Choose any of the 3 convenient installation methods:
+
+#### Method A: 1-Line Install directly from GitHub (Recommended)
+No cloning required. Run directly in your terminal:
 ```bash
-# Print the generated self-checking testbench directly to terminal
-rtl-autobench gen-tb my_design.sv --cycles 100
-
-# Or save it to a testbench file directly
-rtl-autobench gen-tb my_design.sv --cycles 100 -o my_design_tb.sv
+pip install git+https://github.com/bendamurimanidhar-cmd/rtl-autobench.git
+```
+*(Or with `uv`)*:
+```bash
+uv tool install git+https://github.com/bendamurimanidhar-cmd/rtl-autobench.git
 ```
 
-### What the Generated Testbench Includes:
-1. **Clock Generator:** 100MHz free-running clock (`10ns` period).
-2. **Dynamic Reset Protocol:** Automatically asserts and deasserts reset according to detected polarity (`active_high` vs `active_low`).
-3. **DUT Instantiation:** Maps all input and output ports with exact bit-widths and parameter symbols.
-4. **Constrained Random Stimulus:** Uses `$urandom` and multi-chunk concatenation for wide 64-bit/128-bit buses.
-5. **Floating State Monitors:** Checks for `X` and `Z` high-impedance hazards on every positive clock edge.
-6. **Self-Checking Scoreboard:** Counts total vectors, logs assertion errors, and displays a pre-silicon verification pass/fail banner.
-
----
-
-## ⚡ 2. Zero-Command Live Watch Daemon
-
+#### Method B: Clone from Source
 ```bash
-# Run once: monitors the directory and auto-verifies any HDL file when saved
-rtl-autobench watch ./examples
+# 1. Clone repository
+git clone https://github.com/bendamurimanidhar-cmd/rtl-autobench.git
+cd rtl-autobench
+
+# 2. Activate in editable development mode
+pip install -e .
 ```
-*Hit Save (`Cmd+S` / `Ctrl+S`) in your code editor, and RTL-AutoBench automatically compiles, lints, and simulates the design in the background.*
+
+#### Method C: 1-Click Pre-Built Wheel
+Download the `.whl` from [GitHub Releases v1.0.0](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.0):
+```bash
+pip install rtl_autobench-1.0.0-py3-none-any.whl
+```
 
 ---
 
-## ⚡ 3. Direct Full Verification (Linter + Simulator + Synthesizer)
+## ⚡ How to Use RTL-AutoBench
+
+Once installed, the `rtl-autobench` command is globally available in your terminal.
+
+### 1. One-Command Full Verification & PnR Layout
+Run complete 6-stage pre-silicon verification on any module:
 ```bash
-# Verify a module and generate both testbench and pre-tapeout certificate
+rtl-autobench path/to/my_design.sv
+```
+*(Optionally specify simulation cycles with `--cycles <number>`)*:
+```bash
 rtl-autobench examples/param_counter.sv --cycles 2000
 ```
+
+#### What happens in this single command:
+1. **[1/6] Hardware AST Analysis**: Extracts modules, parameters (`WIDTH=8`), clock, and active-high / active-low reset.
+2. **[2/6] SVA & Testbench Generation**: Synthesizes cycle-accurate SystemVerilog testbench (`*_tb.sv`) with constrained random stimulus and $urandom concatenation.
+3. **[3/6] Verilator Static Lint**: Checks for port mismatches, width truncations, and floating nets.
+4. **[4/6] Cycle-Accurate Simulation**: Simulates the design using Icarus Verilog (`iverilog` / `vvp`).
+5. **[5/6] Yosys Gate Synthesis**: Maps RTL to physical standard cells and exports gate-level netlists (`*_netlist.v`, `*_pnr.json`).
+6. **[6/6] NextPnR Layout & STA**: Computes slice placement, LUT4/DFF utilization %, wire routing density, and Static Timing Analysis (Critical Path delay, $F_{\max}$, and Slack @ 100MHz).
+7. **Audit Certificate**: Outputs a comprehensive pre-tapeout certificate (`*_CERTIFICATE.md`).
+
+---
+
+### 2. Standalone Testbench Generator (`gen-tb`)
+Generate a standalone, self-checking SystemVerilog testbench without running the full simulation pipeline:
+
+```bash
+# Print testbench directly to stdout
+rtl-autobench gen-tb my_alu.sv --cycles 500
+
+# Save generated testbench to a file
+rtl-autobench gen-tb my_alu.sv --cycles 500 -o my_alu_tb.sv
+```
+
+---
+
+### 3. Autonomous Zero-Touch Live Watcher (`watch`)
+Ideal for developers working in VS Code, Sublime, or Vim. Start the file watcher once:
+
+```bash
+rtl-autobench watch ./src
+```
+*Hit Save (`Cmd+S` / `Ctrl+S`) in your code editor on any `.v` or `.sv` file, and RTL-AutoBench automatically triggers linting, SVA synthesis, and simulations in the background without typing any terminal commands!*
+
+---
+
+## 📊 Verification Output Artifacts
+
+Running verification automatically creates a `verification_out/` directory containing:
+
+| Artifact File | Description |
+| :--- | :--- |
+| `<module>_tb.sv` | Complete self-checking SystemVerilog testbench with constrained random stimulus |
+| `<module>_netlist.v` | Synthesized gate-level netlist mapped to standard physical cells |
+| `<module>_pnr.json` | NextPnR-compatible JSON structural netlist |
+| `<module>_CERTIFICATE.md` | Formal Pre-Silicon Verification & Tape-Out Audit Certificate |
+
+---
+
+## 🧪 Running Built-in Stress Tests
+
+Verify the engine against 10,000,000 theoretical hardware vectors:
+```bash
+# Unit tests
+python3 -m unittest tests/test_autoverif.py
+
+# 5,000 tests x 2,000 cycles stress suite
+python3 tests/stress_5000x2000.py
+```
+
+---
+
+## 📄 License
+MIT License. Created by [bendamurimanidhar-cmd](https://github.com/bendamurimanidhar-cmd).
