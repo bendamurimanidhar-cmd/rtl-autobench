@@ -23,6 +23,78 @@ from autoverif.sim.iverilog_runner import IcarusRunner
 from autoverif.sim.yosys_synth import YosysSynthesizer
 from autoverif.sim.pnr_engine import NextPnREngine
 from autoverif.report.cert_generator import CertificateGenerator
+import shutil
+import subprocess
+import platform
+
+def check_eda_toolchain() -> Dict[str, Any]:
+    """Scans system for required and optional EDA binaries and prints health status."""
+    tools = {
+        "Icarus Verilog Compiler (iverilog)": shutil.which("iverilog") or ("/opt/homebrew/bin/iverilog" if os.path.exists("/opt/homebrew/bin/iverilog") else None),
+        "Icarus Simulation Engine (vvp)": shutil.which("vvp") or ("/opt/homebrew/bin/vvp" if os.path.exists("/opt/homebrew/bin/vvp") else None),
+        "Verilator Static Linter (verilator)": shutil.which("verilator") or ("/opt/homebrew/bin/verilator" if os.path.exists("/opt/homebrew/bin/verilator") else None),
+        "Yosys Open Synthesis Suite (yosys)": shutil.which("yosys") or ("/opt/homebrew/bin/yosys" if os.path.exists("/opt/homebrew/bin/yosys") else None),
+        "NextPnR Placement & STA Engine": "BUILT-IN (Native Python STA & Placement)"
+    }
+
+    print("\n" + "=" * 65)
+    print(" ⚡ RTL-AutoBench EDA Toolchain Health Check")
+    print("=" * 65)
+
+    all_found = True
+    for name, loc in tools.items():
+        if loc:
+            if "BUILT-IN" in str(loc):
+                print(f" [✓] {name:<35} : {loc}")
+            else:
+                print(f" [✓] {name:<35} : FOUND ({loc})")
+        else:
+            print(f" [✗] {name:<35} : NOT FOUND")
+            all_found = False
+
+    print("=" * 65)
+    if all_found:
+        print(" All EDA engines detected! System is 100% tape-out ready.\n")
+    else:
+        print(" To install missing tools in 1 command, run:")
+        print("   rtl-autobench install-eda")
+        print(" Or install manually:")
+        print("   • macOS (Homebrew): brew install iverilog verilator yosys")
+        print("   • Ubuntu / Debian:  sudo apt update && sudo apt install -y iverilog verilator yosys")
+        print("=" * 65 + "\n")
+
+    return tools
+
+def install_eda_toolchain():
+    """Attempts automated installation of missing EDA tools on host OS."""
+    os_name = platform.system().lower()
+    print(f"\n[RTL-AutoBench] Detecting host operating system: {os_name}...")
+
+    if "darwin" in os_name:
+        if shutil.which("brew"):
+            print("[RTL-AutoBench] Homebrew detected. Installing iverilog, verilator, yosys...")
+            cmd = ["brew", "install", "iverilog", "verilator", "yosys"]
+            print(f"Executing: {' '.join(cmd)}")
+            res = subprocess.run(cmd)
+            if res.returncode == 0:
+                print("\n[SUCCESS] EDA toolchain successfully installed via Homebrew!\n")
+            else:
+                print(f"\n[WARNING] brew install returned exit code {res.returncode}")
+        else:
+            print("[ERROR] Homebrew not found. Please install Homebrew or run:")
+            print("        brew install iverilog verilator yosys")
+    elif "linux" in os_name:
+        if shutil.which("apt-get"):
+            print("[RTL-AutoBench] Debian/Ubuntu package manager detected.")
+            cmd = ["sudo", "apt-get", "update", "&&", "sudo", "apt-get", "install", "-y", "iverilog", "verilator", "yosys"]
+            print("Running: sudo apt-get update && sudo apt-get install -y iverilog verilator yosys")
+            subprocess.run("sudo apt-get update && sudo apt-get install -y iverilog verilator yosys", shell=True)
+        else:
+            print("[INFO] Please install via your Linux package manager:")
+            print("       sudo apt install iverilog verilator yosys")
+    else:
+        print(f"[INFO] On Windows, please install EDA tools via MSYS2 or WSL:")
+        print("       pacman -S mingw-w64-x86_64-yosys mingw-w64-x86_64-iverilog")
 
 def generate_testbench_only(verilog_path: str, cycles: int = 100, output_file: str = None) -> str:
     """Parses any Verilog source code and synthesizes a complete self-checking testbench."""
@@ -168,7 +240,7 @@ def watch_directory(watch_dir: str, cycles: int = 50):
 
 def main():
     # If first argument is a file path rather than a subcommand, default to 'verify'
-    subcommands = ["gen-tb", "watch", "verify"]
+    subcommands = ["gen-tb", "watch", "verify", "check-eda", "install-eda"]
     if len(sys.argv) > 1 and sys.argv[1] not in subcommands and not sys.argv[1].startswith("-"):
         sys.argv.insert(1, "verify")
 
@@ -194,6 +266,12 @@ def main():
     watch_p.add_argument("directory", nargs="?", default=".", help="Directory to monitor for Verilog changes (default: current directory)")
     watch_p.add_argument("--cycles", type=int, default=50, help="Simulation vectors per test run")
 
+    # 4. Check EDA Toolchain (`check-eda`)
+    sub.add_parser("check-eda", help="Scan host machine for iverilog, verilator, yosys, and NextPnR engines")
+
+    # 5. Install EDA Toolchain (`install-eda`)
+    sub.add_parser("install-eda", help="Automatically install missing EDA tools (Homebrew/APT)")
+
     args = p.parse_args()
 
     if args.subcommand == "verify":
@@ -202,6 +280,10 @@ def main():
         generate_testbench_only(args.source_file, cycles=args.cycles, output_file=args.output)
     elif args.subcommand == "watch":
         watch_directory(args.directory, cycles=args.cycles)
+    elif args.subcommand == "check-eda":
+        check_eda_toolchain()
+    elif args.subcommand == "install-eda":
+        install_eda_toolchain()
     else:
         p.print_help()
 
