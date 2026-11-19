@@ -28,7 +28,7 @@ class CertificateGenerator:
 ## Certificate of Functional Verification: `{mod}`
 **Status:** {badge}  
 **Date of Audit:** {ts}  
-**Auditor Engine:** `RTL-AutoBench v1.0.0`  
+**Auditor Engine:** `RTL-AutoBench v1.0.1`  
 
 ---
 

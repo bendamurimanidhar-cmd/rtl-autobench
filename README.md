@@ -4,7 +4,7 @@
 [![Verification Suite](https://img.shields.io/badge/verification-passed-brightgreen.svg)]()
 [![SystemVerilog](https://img.shields.io/badge/standard-IEEE%201800-blue.svg)]()
 [![EDA](https://img.shields.io/badge/eda-verilator%20%7C%20iverilog%20%7C%20yosys%20%7C%20nextpnr-orange.svg)]()
-[![Release](https://img.shields.io/badge/release-v1.0.0-purple.svg)](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/badge/release-v1.0.1-purple.svg)](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.1)
 
 `RTL-AutoBench` is an enterprise-grade autonomous pre-silicon verification and physical synthesis tool. **Feed it any Verilog or SystemVerilog hardware source code, and with a single command it synthesizes self-checking testbenches, runs dual-engine simulations (Verilator + Icarus), performs Yosys logic synthesis, and executes NextPnR FPGA placement & Static Timing Analysis (STA).**
 
@@ -13,12 +13,12 @@
 ## 🚀 Quickstart: Download & Activate
 
 ### 📦 Direct Package Downloads (All Platforms)
-Download pre-built packages from [GitHub Releases v1.0.0](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.0):
+Download pre-built packages from [GitHub Releases v1.0.1](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.1):
 
 | Platform | Download Link | Description | Size |
 | :--- | :--- | :--- | :--- |
-| **Universal (All Platforms)** | 📦 **[Download rtl_autobench-1.0.0-py3-none-any.whl](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/download/v1.0.0/rtl_autobench-1.0.0-py3-none-any.whl)** | Standalone Wheel | ~19 KB |
-| **Source Archive** | 🗜️ **[Download rtl_autobench-1.0.0.tar.gz](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/download/v1.0.0/rtl_autobench-1.0.0.tar.gz)** | Source Code Tarball | ~18 KB |
+| **Universal (All Platforms)** | 📦 **[Download rtl_autobench-1.0.1-py3-none-any.whl](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/download/v1.0.1/rtl_autobench-1.0.1-py3-none-any.whl)** | Standalone Wheel | ~19 KB |
+| **Source Archive** | 🗜️ **[Download rtl_autobench-1.0.1.tar.gz](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/download/v1.0.1/rtl_autobench-1.0.1.tar.gz)** | Source Code Tarball | ~18 KB |
 
 ---
 
