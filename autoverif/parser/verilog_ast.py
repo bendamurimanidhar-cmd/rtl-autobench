@@ -107,7 +107,7 @@ class VerilogModuleParser:
 
         if not ports_raw:
             body_ports = re.findall(
-                rf'\b(input|output|inout)\s+(?:(?:wire|reg|logic)\s+)?(?:{range_pat})?\s*([A-Za-z_][A-Za-z0-9_,\s]*)',
+                rf'\b(input|output|inout)\s+(?:(?:wire|reg|logic)\s+)?(?:(?:signed|unsigned)\s+)?(?:{range_pat})?\s*([A-Za-z_][A-Za-z0-9_,\s]*)',
                 self.code
             )
             for direction, msb_expr, lsb_expr, names in body_ports:
@@ -125,9 +125,10 @@ class VerilogModuleParser:
 
         tokens = [t.strip() for t in ports_raw.split(",") if t.strip()]
         last_dir = "input"
+        last_width = 1
         for t in tokens:
             m = re.search(
-                rf'\b(input|output|inout)\s+(?:(?:wire|reg|logic)\s+)?(?:{range_pat})?\s*([A-Za-z_][A-Za-z0-9_]*)',
+                rf'\b(input|output|inout)\s+(?:(?:wire|reg|logic)\s+)?(?:(?:signed|unsigned)\s+)?(?:{range_pat})?\s*([A-Za-z_][A-Za-z0-9_]*)',
                 t
             )
             if m:
@@ -140,9 +141,10 @@ class VerilogModuleParser:
                     width = abs(msb - lsb) + 1
                 else:
                     width = 1
+                last_width = width
                 ports.append({"name": name, "direction": last_dir, "width": width})
             else:
-                m_short = re.search(rf'(?:(?:wire|reg|logic)\s+)?(?:{range_pat})?\s*([A-Za-z_][A-Za-z0-9_]*)', t)
+                m_short = re.search(rf'(?:(?:wire|reg|logic)\s+)?(?:(?:signed|unsigned)\s+)?(?:{range_pat})?\s*([A-Za-z_][A-Za-z0-9_]*)', t)
                 if m_short:
                     msb_expr, lsb_expr = m_short.group(1), m_short.group(2)
                     name = m_short.group(3)
@@ -151,7 +153,7 @@ class VerilogModuleParser:
                         lsb = self._eval_expr(lsb_expr)
                         width = abs(msb - lsb) + 1
                     else:
-                        width = 1
+                        width = last_width  # `input [7:0] a, b` -> b is 8 bits too
                     ports.append({"name": name, "direction": last_dir, "width": width})
         return ports
 

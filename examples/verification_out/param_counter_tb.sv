@@ -48,7 +48,7 @@ module param_counter_autobench_tb;
     $display("[%0t] [INIT] Reset released (active_high). Beginning autonomous test vectors...", $time);
 
     // 2. Randomized Fuzzing & Boundary Vector Execution
-    repeat (50) begin
+    repeat (5000) begin
       @(negedge clk);
       en = $urandom_range(0, 1);
       up_down = $urandom_range(0, 1);
@@ -57,10 +57,12 @@ module param_counter_autobench_tb;
       #1;
       // Automated sanity checks (detecting X / Z floating hazards)
       if ($isunknown(count)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on count", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on count", $time);
+        errors = errors + 1;
       end
       if ($isunknown(overflow)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on overflow", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on overflow", $time);
+        errors = errors + 1;
       end
     end
 

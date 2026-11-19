@@ -63,13 +63,16 @@ module fifo_sync_autobench_tb;
       #1;
       // Automated sanity checks (detecting X / Z floating hazards)
       if ($isunknown(rd_data)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on rd_data", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on rd_data", $time);
+        errors = errors + 1;
       end
       if ($isunknown(full)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on full", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on full", $time);
+        errors = errors + 1;
       end
       if ($isunknown(empty)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on empty", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on empty", $time);
+        errors = errors + 1;
       end
     end
 

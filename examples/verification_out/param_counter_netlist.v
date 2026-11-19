@@ -2,24 +2,24 @@
 
 (* dynports =  1  *)
 (* top =  1  *)
-(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:6.1-45.10" *)
+(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:6.1-45.10" *)
 module param_counter(clk, rst, en, up_down, count, overflow);
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:10.33-10.36" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:10.33-10.36" *)
   input clk;
   wire clk;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:11.33-11.36" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:11.33-11.36" *)
   input rst;
   wire rst;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:12.33-12.35" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:12.33-12.35" *)
   input en;
   wire en;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:13.33-13.40" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:13.33-13.40" *)
   input up_down;
   wire up_down;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:14.33-14.38" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:14.33-14.38" *)
   output [7:0] count;
   reg [7:0] count;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:15.33-15.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:15.33-15.41" *)
   output overflow;
   reg overflow;
   wire _000_;
@@ -30,187 +30,187 @@ module param_counter(clk, rst, en, up_down, count, overflow);
   wire [1:0] _005_;
   wire _006_;
   wire _007_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)
   wire _008_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)
   wire _009_;
   wire _010_;
   wire [7:0] _011_;
   wire [7:0] _012_;
   wire [7:0] _013_;
   (* force_downto = 32'd1 *)
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:274.23-274.25" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:274.23-274.25" *)
   wire [7:0] _014_;
   (* force_downto = 32'd1 *)
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:287.21-287.22" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:287.21-287.22" *)
   wire [7:0] _015_;
   (* force_downto = 32'd1 *)
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:270.26-270.27" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:270.26-270.27" *)
   wire [7:0] _016_;
   (* force_downto = 32'd1 *)
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:274.23-274.25" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:274.23-274.25" *)
   wire [7:0] _017_;
   (* force_downto = 32'd1 *)
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:287.21-287.22" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:287.21-287.22" *)
   wire [7:0] _018_;
   (* force_downto = 32'd1 *)
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:270.26-270.27" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:270.26-270.27" *)
   wire [7:0] _019_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
   wire _020_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
   wire _021_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
   wire _022_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
   wire _023_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
   wire _024_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)
   wire _025_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
   wire _026_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)
   wire _027_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
   wire _028_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
   wire _029_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
   wire _030_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)
   wire _031_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)
   wire _032_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)
   wire _033_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (_001_) overflow <= 1'h0;
     else overflow <= _010_;
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[0] <= 1'h0;
     else if (en) count[0] <= _013_[0];
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[1] <= 1'h0;
     else if (en) count[1] <= _013_[1];
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[2] <= 1'h0;
     else if (en) count[2] <= _013_[2];
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[3] <= 1'h0;
     else if (en) count[3] <= _013_[3];
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[4] <= 1'h0;
     else if (en) count[4] <= _013_[4];
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[5] <= 1'h0;
     else if (en) count[5] <= _013_[5];
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[6] <= 1'h0;
     else if (en) count[6] <= _013_[6];
-  (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
+  (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8" *)
   always @(posedge clk)
     if (rst) count[7] <= 1'h0;
     else if (en) count[7] <= _013_[7];
   assign _018_[7] = ~count[7];
   assign _015_[0] = ~count[0];
-  assign _016_[1] = count[1] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  count[0];
-  assign _016_[2] = count[2] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[1];
-  assign _016_[3] = count[3] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[2];
-  assign _016_[4] = count[4] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[3];
-  assign _016_[5] = count[5] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[4];
-  assign _016_[6] = count[6] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[5];
-  assign _016_[7] = count[7] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[6];
-  assign _019_[1] = _018_[1] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  count[0];
-  assign _019_[2] = _018_[2] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[1];
-  assign _019_[3] = _018_[3] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[2];
-  assign _019_[4] = _018_[4] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[3];
-  assign _019_[5] = _018_[5] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[4];
-  assign _019_[6] = _018_[6] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[5];
-  assign _019_[7] = _018_[7] ^(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[6];
-  assign _014_[2] = count[2] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[1];
-  assign _014_[4] = count[4] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[3];
-  assign _014_[5] = _021_ &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[3];
-  assign _014_[6] = count[6] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[5];
-  assign _014_[3] = _020_ &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  _014_[1];
-  assign _021_ = count[5] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  count[4];
-  assign _020_ = count[3] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  count[2];
-  assign _014_[1] = count[1] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[0];
-  assign _017_[2] = count[2] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _029_;
-  assign _029_ = _018_[2] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[1];
-  assign _030_ = _018_[4] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[3];
-  assign _017_[5] = _033_ |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _028_;
-  assign _028_ = _027_ &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[3];
-  assign _031_ = _018_[6] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[5];
-  assign _017_[6] = count[6] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _031_;
-  assign _017_[3] = _032_ |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _025_;
-  assign _025_ = _026_ &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  _017_[1];
-  assign _027_ = _018_[5] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  _018_[4];
-  assign _033_ = count[5] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _024_;
-  assign _024_ = _018_[5] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[4];
-  assign _026_ = _018_[3] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  _018_[2];
-  assign _032_ = count[3] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _023_;
-  assign _023_ = _018_[3] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[2];
-  assign _017_[4] = count[4] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _030_;
-  assign _017_[1] = count[1] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _022_;
-  assign _022_ = _018_[1] &(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[0];
+  assign _016_[1] = count[1] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  count[0];
+  assign _016_[2] = count[2] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[1];
+  assign _016_[3] = count[3] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[2];
+  assign _016_[4] = count[4] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[3];
+  assign _016_[5] = count[5] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[4];
+  assign _016_[6] = count[6] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[5];
+  assign _016_[7] = count[7] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _014_[6];
+  assign _019_[1] = _018_[1] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  count[0];
+  assign _019_[2] = _018_[2] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[1];
+  assign _019_[3] = _018_[3] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[2];
+  assign _019_[4] = _018_[4] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[3];
+  assign _019_[5] = _018_[5] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[4];
+  assign _019_[6] = _018_[6] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[5];
+  assign _019_[7] = _018_[7] ^(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:296.13-296.25" *)  _017_[6];
+  assign _014_[2] = count[2] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[1];
+  assign _014_[4] = count[4] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[3];
+  assign _014_[5] = _021_ &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[3];
+  assign _014_[6] = count[6] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _014_[5];
+  assign _014_[3] = _020_ &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  _014_[1];
+  assign _021_ = count[5] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  count[4];
+  assign _020_ = count[3] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  count[2];
+  assign _014_[1] = count[1] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[0];
+  assign _017_[2] = count[2] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _029_;
+  assign _029_ = _018_[2] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[1];
+  assign _030_ = _018_[4] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[3];
+  assign _017_[5] = _033_ |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _028_;
+  assign _028_ = _027_ &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[3];
+  assign _031_ = _018_[6] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.19-248.41" *)  _017_[5];
+  assign _017_[6] = count[6] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _031_;
+  assign _017_[3] = _032_ |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _025_;
+  assign _025_ = _026_ &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  _017_[1];
+  assign _027_ = _018_[5] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  _018_[4];
+  assign _033_ = count[5] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _024_;
+  assign _024_ = _018_[5] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[4];
+  assign _026_ = _018_[3] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:241.12-241.34" *)  _018_[2];
+  assign _032_ = count[3] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _023_;
+  assign _023_ = _018_[3] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[2];
+  assign _017_[4] = count[4] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:248.12-248.41" *)  _030_;
+  assign _017_[1] = count[1] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.12-240.41" *)  _022_;
+  assign _022_ = _018_[1] &(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:36.33-36.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:293.27-293.63|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:240.19-240.41" *)  count[0];
   assign _001_ = _000_ | rst;
-  assign _002_[0] = _015_[0] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[1];
-  assign _002_[1] = _018_[2] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[3];
-  assign _002_[2] = _018_[4] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[5];
-  assign _002_[3] = _018_[6] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[7];
-  assign _003_[0] = _002_[0] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _002_[1];
-  assign _003_[1] = _002_[2] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _002_[3];
-  assign _007_ = _003_[0] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _003_[1];
-  assign _004_[0] = count[0] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[1];
-  assign _004_[1] = count[2] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[3];
-  assign _004_[2] = count[4] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[5];
-  assign _004_[3] = count[6] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[7];
-  assign _005_[0] = _004_[0] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  _004_[1];
-  assign _005_[1] = _004_[2] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  _004_[3];
-  assign _006_ = _005_[0] |(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  _005_[1];
-  assign _009_ = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _006_;
-  assign _008_ = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _007_;
-  assign _010_ = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _008_ : _009_;
-  assign _011_[0] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _015_[0] : 1'h1;
-  assign _011_[1] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[1] : 1'h1;
-  assign _011_[2] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[2] : 1'h1;
-  assign _011_[3] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[3] : 1'h1;
-  assign _011_[4] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[4] : 1'h1;
-  assign _011_[5] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[5] : 1'h1;
-  assign _011_[6] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[6] : 1'h1;
-  assign _011_[7] = _006_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[7] : 1'h1;
-  assign _012_[0] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _015_[0] : 1'h0;
-  assign _012_[1] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[1] : 1'h0;
-  assign _012_[2] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[2] : 1'h0;
-  assign _012_[3] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[3] : 1'h0;
-  assign _012_[4] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[4] : 1'h0;
-  assign _012_[5] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[5] : 1'h0;
-  assign _012_[6] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[6] : 1'h0;
-  assign _012_[7] = _007_ ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[7] : 1'h0;
-  assign _013_[0] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[0] : _011_[0];
-  assign _013_[1] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[1] : _011_[1];
-  assign _013_[2] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[2] : _011_[2];
-  assign _013_[3] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[3] : _011_[3];
-  assign _013_[4] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[4] : _011_[4];
-  assign _013_[5] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[5] : _011_[5];
-  assign _013_[6] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[6] : _011_[6];
-  assign _013_[7] = up_down ? (* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[7] : _011_[7];
+  assign _002_[0] = _015_[0] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[1];
+  assign _002_[1] = _018_[2] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[3];
+  assign _002_[2] = _018_[4] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[5];
+  assign _002_[3] = _018_[6] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _018_[7];
+  assign _003_[0] = _002_[0] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _002_[1];
+  assign _003_[1] = _002_[2] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _002_[3];
+  assign _007_ = _003_[0] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50" *)  _003_[1];
+  assign _004_[0] = count[0] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[1];
+  assign _004_[1] = count[2] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[3];
+  assign _004_[2] = count[4] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[5];
+  assign _004_[3] = count[6] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  count[7];
+  assign _005_[0] = _004_[0] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  _004_[1];
+  assign _005_[1] = _004_[2] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  _004_[3];
+  assign _006_ = _005_[0] |(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43" *)  _005_[1];
+  assign _009_ = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _006_;
+  assign _008_ = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _007_;
+  assign _010_ = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _008_ : _009_;
+  assign _011_[0] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _015_[0] : 1'h1;
+  assign _011_[1] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[1] : 1'h1;
+  assign _011_[2] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[2] : 1'h1;
+  assign _011_[3] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[3] : 1'h1;
+  assign _011_[4] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[4] : 1'h1;
+  assign _011_[5] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[5] : 1'h1;
+  assign _011_[6] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[6] : 1'h1;
+  assign _011_[7] = _006_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.21-32.43|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:32.17-38.20" *) _019_[7] : 1'h1;
+  assign _012_[0] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _015_[0] : 1'h0;
+  assign _012_[1] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[1] : 1'h0;
+  assign _012_[2] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[2] : 1'h0;
+  assign _012_[3] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[3] : 1'h0;
+  assign _012_[4] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[4] : 1'h0;
+  assign _012_[5] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[5] : 1'h0;
+  assign _012_[6] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[6] : 1'h0;
+  assign _012_[7] = _007_ ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.21-24.50|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:24.17-30.20" *) _016_[7] : 1'h0;
+  assign _013_[0] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[0] : _011_[0];
+  assign _013_[1] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[1] : _011_[1];
+  assign _013_[2] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[2] : _011_[2];
+  assign _013_[3] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[3] : _011_[3];
+  assign _013_[4] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[4] : _011_[4];
+  assign _013_[5] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[5] : _011_[5];
+  assign _013_[6] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[6] : _011_[6];
+  assign _013_[7] = up_down ? (* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.17-23.24|/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:23.13-39.16" *) _012_[7] : _011_[7];
   assign _000_ = ~en;
-  assign _018_[1] = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[1];
-  assign _018_[2] = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[2];
-  assign _018_[3] = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[3];
-  assign _018_[4] = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[4];
-  assign _018_[5] = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[5];
-  assign _018_[6] = ~(* src = "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[6];
+  assign _018_[1] = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[1];
+  assign _018_[2] = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[2];
+  assign _018_[3] = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[3];
+  assign _018_[4] = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[4];
+  assign _018_[5] = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[5];
+  assign _018_[6] = ~(* src = "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:28.33-28.45|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/techmap.v:279.31-279.37" *) count[6];
   assign _018_[0] = count[0];
   assign _019_[0] = _015_[0];
   assign _016_[0] = _015_[0];

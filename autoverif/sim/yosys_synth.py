@@ -60,10 +60,11 @@ class YosysSynthesizer:
                 }
 
         # Parse stat output
-        stdout = res.stdout
-        wires = re.search(r'Number of wires:\s+(\d+)', stdout)
-        cells = re.search(r'Number of cells:\s+(\d+)', stdout)
-        public_wires = re.search(r'Number of public wires:\s+(\d+)', stdout)
+        stdout = res.stdout[res.stdout.rfind("Printing statistics"):]  # synth_ice40 prints its own earlier stats
+
+        def stat_count(label):
+            m = re.search(rf'^\s*(?:Number of {label}:\s+(\d+)|(\d+)\s+{label})\s*$', stdout, re.M)
+            return int(m.group(1) or m.group(2)) if m else 0
 
         # Extract cell breakdown (LUTs, Flip-Flops, Gates)
         cell_breakdown = {}
@@ -77,7 +78,7 @@ class YosysSynthesizer:
                 if m2 and not line.strip().startswith("Number of"):
                     cell_breakdown[m2.group(1)] = int(m2.group(2))
 
-        total_cells_val = sum(cell_breakdown.values()) if cell_breakdown else (int(cells.group(1)) if cells else 0)
+        total_cells_val = sum(cell_breakdown.values()) if cell_breakdown else stat_count("cells")
 
         # Check if nextpnr is available to run automated Place & Route
         pnr_status = "NETLIST_GENERATED"
@@ -99,8 +100,9 @@ class YosysSynthesizer:
             "status": "PASSED",
             "top_module": top_module,
             "total_cells": total_cells_val,
-            "total_wires": int(wires.group(1)) if wires else 0,
-            "public_wires": int(public_wires.group(1)) if public_wires else 0,
+            "total_wires": stat_count("wires"),
+            "public_wires": stat_count("public wires"),
+            "port_bits": stat_count("port bits"),
             "cell_breakdown": cell_breakdown,
             "netlist_verilog_path": netlist_v,
             "pnr_json_netlist_path": netlist_json,

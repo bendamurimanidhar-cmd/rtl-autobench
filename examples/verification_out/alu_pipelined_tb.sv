@@ -61,10 +61,12 @@ module alu_pipelined_autobench_tb;
       #1;
       // Automated sanity checks (detecting X / Z floating hazards)
       if ($isunknown(result)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on result", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on result", $time);
+        errors = errors + 1;
       end
       if ($isunknown(carry_out)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on carry_out", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on carry_out", $time);
+        errors = errors + 1;
       end
     end
 

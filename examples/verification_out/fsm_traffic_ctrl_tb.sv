@@ -53,10 +53,12 @@ module fsm_traffic_ctrl_autobench_tb;
       #1;
       // Automated sanity checks (detecting X / Z floating hazards)
       if ($isunknown(light_main)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on light_main", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on light_main", $time);
+        errors = errors + 1;
       end
       if ($isunknown(light_side)) begin
-        $display("[%0t] [WARN] Unknown signal state (X/Z) detected on light_side", $time);
+        $display("[%0t] [ERROR] Unknown signal state (X/Z) detected on light_side", $time);
+        errors = errors + 1;
       end
     end
 

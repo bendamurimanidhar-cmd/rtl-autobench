@@ -111,7 +111,8 @@ class TestbenchSynthesizer:
         lines.append(f"      // Automated sanity checks (detecting X / Z floating hazards)")
         for out in outputs:
             lines.append(f"      if ($isunknown({out['name']})) begin")
-            lines.append(f"        $display(\"[%0t] [WARN] Unknown signal state (X/Z) detected on {out['name']}\", $time);")
+            lines.append(f"        $display(\"[%0t] [ERROR] Unknown signal state (X/Z) detected on {out['name']}\", $time);")
+            lines.append(f"        errors = errors + 1;")
             lines.append(f"      end")
         lines.append(f"    end\n")
 

@@ -46,13 +46,12 @@ class NextPnREngine:
 
         cells = synth_data.get("cell_breakdown", {})
         lut_count = cells.get("SB_LUT4", 0) or cells.get("$_AND_", 0) + cells.get("$_OR_", 0) + cells.get("$_MUX_", 0) + cells.get("$_XOR_", 0)
-        dff_count = cells.get("SB_DFFESR", 0) + cells.get("SB_DFFSR", 0) or cells.get("$_SDFFE_PP0P_", 0) + cells.get("$_SDFF_PP0_", 0)
+        dff_count = sum(n for c, n in cells.items() if c.startswith(("SB_DFF", "$_DFF", "$_SDFF", "$_DFFE")))
         carry_count = cells.get("SB_CARRY", 0)
-        io_count = synth_data.get("public_wires", 12)
+        io_count = synth_data.get("port_bits", 0)
 
         # Minimum clamp for non-zero metrics
         lut_count = max(lut_count, 1)
-        dff_count = max(dff_count, 1) if synth_data.get("clock_ports") else 0
 
         # Physical Utilization Percentages
         lut_util = round((lut_count / TOTAL_LUTS_AVAILABLE) * 100.0, 1)
@@ -93,7 +92,7 @@ class NextPnREngine:
 
         return {
             "status": "PASSED",
-            "engine": "RTL-AutoBench NextPnR Physical Layout & STA Engine",
+            "engine": "RTL-AutoBench analytical estimate (nextpnr not run)",
             "target_device": "1.2V Silicon Core / Lattice iCE40 Architecture",
             "target_clock_mhz": target_clock_mhz,
             "target_period_ns": target_period_ns,

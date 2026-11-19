@@ -12086,7 +12086,7 @@
     "fsm_traffic_ctrl": {
       "attributes": {
         "top": "00000000000000000000000000000001",
-        "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:2.1-45.10"
+        "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:2.1-45.10"
       },
       "ports": {
         "clk": {
@@ -12119,7 +12119,7 @@
           "attributes": {
             "always_ff": "00000000000000000000000000000001",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:17.3-22.6|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:14.63-14.116"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:17.3-22.6|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:14.63-14.116"
           },
           "port_directions": {
             "C": "input",
@@ -12169,7 +12169,7 @@
           "attributes": {
             "always_ff": "00000000000000000000000000000001",
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:17.3-22.6|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:14.63-14.116"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:17.3-22.6|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:14.63-14.116"
           },
           "port_directions": {
             "C": "input",
@@ -12392,7 +12392,7 @@
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:3.24-3.27"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:3.24-3.27"
           }
         },
         "clk_SB_DFFER_C_D": {
@@ -12414,7 +12414,7 @@
           "hide_name": 0,
           "bits": [ 5, 6, 7 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:6.24-6.34"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:6.24-6.34"
           }
         },
         "light_main_SB_DFFER_Q_D": {
@@ -12427,14 +12427,14 @@
           "hide_name": 0,
           "bits": [ 8, 9, 10 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:7.24-7.34"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:7.24-7.34"
           }
         },
         "rst_n": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:4.24-4.29"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:4.24-4.29"
           }
         },
         "rst_n_SB_LUT4_I3_O": {
@@ -12447,7 +12447,7 @@
           "hide_name": 0,
           "bits": [ 4 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/fsm_traffic_ctrl.sv:5.24-5.34"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/fsm_traffic_ctrl.sv:5.24-5.34"
           }
         },
         "sensor_car_SB_LUT4_I1_O": {

@@ -4,7 +4,7 @@ Emits executive Markdown and self-contained interactive audit reports
 including simulation, Yosys logic synthesis, and NextPnR physical layout & timing.
 """
 
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any
 
 class CertificateGenerator:
@@ -15,10 +15,10 @@ class CertificateGenerator:
         sim = audit_data.get("sim", {})
         synth = audit_data.get("synth", {})
         pnr = audit_data.get("pnr", {})
-        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
         overall_status = "PASSED" if sim.get("status") == "PASSED" and lint.get("status") in ["PASSED", "SKIPPED"] else "FAILED"
-        badge = "🟢 READY FOR TAPE-OUT" if overall_status == "PASSED" else "🔴 ACTION REQUIRED"
+        badge = "🟢 ALL AUTOMATED CHECKS PASSED" if overall_status == "PASSED" else "🔴 ACTION REQUIRED"
 
         pnr_util = pnr.get("utilization", {})
         pnr_timing = pnr.get("timing", {})
@@ -28,7 +28,7 @@ class CertificateGenerator:
 ## Certificate of Functional Verification: `{mod}`
 **Status:** {badge}  
 **Date of Audit:** {ts}  
-**Auditor Engine:** `RTL-AutoBench v2.0 Enterprise`  
+**Auditor Engine:** `RTL-AutoBench v1.0.0`  
 
 ---
 
@@ -50,7 +50,7 @@ class CertificateGenerator:
 
 ---
 
-### 3. NextPnR Physical Layout & Placement Metrics
+### 3. Physical Layout & Placement Metrics (`{pnr.get('engine', 'N/A')}`)
 * **Target Architecture:** `{pnr.get('target_device', '1.2V CMOS / iCE40 Architecture')}`
 * **LUT4 Utilization:** `{pnr_util.get('lut4_used', 0)} / {pnr_util.get('lut4_total', 1280)} ({pnr_util.get('lut4_pct', 0)}%)`
 * **Flip-Flop (DFF) Utilization:** `{pnr_util.get('dff_used', 0)} / {pnr_util.get('dff_total', 1280)} ({pnr_util.get('dff_pct', 0)}%)`

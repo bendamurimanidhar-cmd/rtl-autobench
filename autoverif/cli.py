@@ -86,7 +86,6 @@ def install_eda_toolchain():
     elif "linux" in os_name:
         if shutil.which("apt-get"):
             print("[RTL-AutoBench] Debian/Ubuntu package manager detected.")
-            cmd = ["sudo", "apt-get", "update", "&&", "sudo", "apt-get", "install", "-y", "iverilog", "verilator", "yosys"]
             print("Running: sudo apt-get update && sudo apt-get install -y iverilog verilator yosys")
             subprocess.run("sudo apt-get update && sudo apt-get install -y iverilog verilator yosys", shell=True)
         else:
@@ -178,6 +177,7 @@ def run_verification_flow(verilog_path: str, cycles: int = 50, output_dir: str =
     pnr_timing = pnr_res.get("timing", {})
     pnr_layout = pnr_res.get("layout", {})
 
+    print(f"      Engine        : {pnr_res.get('engine')}")
     print(f"      Target Silicon: {pnr_res.get('target_device')}")
     print(f"      Placement     : {pnr_util.get('lut4_used', 0)}/{pnr_util.get('lut4_total', 1280)} LUT4s ({pnr_util.get('lut4_pct', 0)}%) | {pnr_util.get('dff_used', 0)}/{pnr_util.get('dff_total', 1280)} DFFs ({pnr_util.get('dff_pct', 0)}%) | {pnr_util.get('io_used', 0)} IOs")
     print(f"      Layout Grid   : {pnr_layout.get('bounding_box')} (Routing Density: {pnr_layout.get('routing_density_pct') }%)")
@@ -198,7 +198,8 @@ def run_verification_flow(verilog_path: str, cycles: int = 50, output_dir: str =
     with open(cert_path, "w", encoding="utf-8") as f:
         f.write(cert_md)
 
-    print(f"\n[SUCCESS] Pre-Silicon Verification & PnR complete! Audit Certificate written to:")
+    audit_data["passed"] = sim_res["status"] == "PASSED" and lint_res["status"] in ("PASSED", "SKIPPED")
+    print(f"\n[{'SUCCESS' if audit_data['passed'] else 'FAILED'}] Verification flow finished. Audit Certificate written to:")
     print(f"          {cert_path}\n")
     return audit_data
 
@@ -275,7 +276,7 @@ def main():
     args = p.parse_args()
 
     if args.subcommand == "verify":
-        run_verification_flow(args.verilog_file, cycles=args.cycles, output_dir=args.outdir)
+        sys.exit(0 if run_verification_flow(args.verilog_file, cycles=args.cycles, output_dir=args.outdir).get("passed") else 1)
     elif args.subcommand == "gen-tb":
         generate_testbench_only(args.source_file, cycles=args.cycles, output_file=args.output)
     elif args.subcommand == "watch":

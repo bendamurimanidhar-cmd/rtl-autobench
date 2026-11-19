@@ -97,5 +97,30 @@ class TestRTLAutoBench(unittest.TestCase):
         self.assertEqual(res["sim"]["status"], "PASSED")
         self.assertEqual(res["reset_polarity"], "active_high")
 
+    def test_signed_and_shared_width_ports(self):
+        meta = VerilogModuleParser(
+            "module m (input wire clk, input signed [7:0] x, input logic [3:0] a, b, output reg signed [7:0] y); endmodule"
+        ).parse()
+        widths = {p["name"]: p["width"] for p in meta["ports"]}
+        self.assertEqual(widths, {"clk": 1, "x": 8, "a": 4, "b": 4, "y": 8})
+
+    def test_x_output_fails_simulation(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            src = os.path.join(d, "xout.sv")
+            with open(src, "w") as f:
+                f.write("module xout (input logic clk, input logic rst_n, output logic [3:0] q);\n"
+                        "  logic [3:0] r;\n  assign q = r;\nendmodule\n")
+            res = run_verification_flow(src, cycles=5, output_dir=d)
+            if res["sim"]["status"] != "SKIPPED":
+                self.assertEqual(res["sim"]["status"], "FAILED")
+                self.assertFalse(res["passed"])
+
+    def test_counter_reports_flip_flops(self):
+        res = run_verification_flow(self.param_counter_path, cycles=5)
+        if res["synth"].get("status") == "PASSED":
+            self.assertGreaterEqual(res["pnr"]["utilization"]["dff_used"], 8)
+            self.assertGreater(res["synth"]["total_wires"], 0)
+
 if __name__ == "__main__":
     unittest.main()

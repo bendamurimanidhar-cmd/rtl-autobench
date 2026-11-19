@@ -12262,7 +12262,7 @@
       "attributes": {
         "dynports": "00000000000000000000000000000001",
         "top": "00000000000000000000000000000001",
-        "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:6.1-45.10"
+        "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:6.1-45.10"
       },
       "parameter_default_values": {
         "MAX_COUNT": "00000000000000000000000011111111",
@@ -12302,7 +12302,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12326,7 +12326,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12375,7 +12375,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12449,7 +12449,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12498,7 +12498,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12547,7 +12547,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12596,7 +12596,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12645,7 +12645,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:24.66-24.119"
           },
           "port_directions": {
             "C": "input",
@@ -12769,7 +12769,7 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:19.59-19.105"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:18.5-43.8|/opt/homebrew/Cellar/yosys/0.70/bin/../share/yosys/ice40/ff_map.v:19.59-19.105"
           },
           "port_directions": {
             "C": "input",
@@ -12915,14 +12915,14 @@
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:10.33-10.36"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:10.33-10.36"
           }
         },
         "count": {
           "hide_name": 0,
           "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:14.33-14.38"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:14.33-14.38"
           }
         },
         "count_SB_DFFESR_Q_1_D": {
@@ -12985,7 +12985,7 @@
           "hide_name": 0,
           "bits": [ 4 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:12.33-12.35"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:12.33-12.35"
           }
         },
         "en_SB_LUT4_I3_1_O": {
@@ -13004,7 +13004,7 @@
           "hide_name": 0,
           "bits": [ 14 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:15.33-15.41"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:15.33-15.41"
           }
         },
         "overflow_SB_DFFSR_Q_D": {
@@ -13017,14 +13017,14 @@
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:11.33-11.36"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:11.33-11.36"
           }
         },
         "up_down": {
           "hide_name": 0,
           "bits": [ 5 ],
           "attributes": {
-            "src": "/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/param_counter.sv:13.33-13.40"
+            "src": "/Users/mohanmanidhar/rtl-autobench-review/rtl-autobench/examples/param_counter.sv:13.33-13.40"
           }
         },
         "up_down_SB_LUT4_I3_1_O": {
