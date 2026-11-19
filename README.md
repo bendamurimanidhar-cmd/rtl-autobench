@@ -12,25 +12,17 @@
 
 ## 🚀 Quickstart: Download & Activate
 
-### Step 1: Install EDA Engines (Prerequisites)
-RTL-AutoBench leverages open-source silicon EDA tools for simulation and synthesis:
+### 📦 Direct Package Downloads (All Platforms)
+Download pre-built packages from [GitHub Releases v1.0.0](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.0):
 
-- **macOS (Homebrew):**
-  ```bash
-  brew install iverilog verilator yosys
-  ```
-- **Ubuntu / Debian:**
-  ```bash
-  sudo apt update && sudo apt install -y iverilog verilator yosys
-  ```
+| Platform | Download Link | Description | Size |
+| :--- | :--- | :--- | :--- |
+| **Universal (All Platforms)** | 📦 **[Download rtl_autobench-1.0.0-py3-none-any.whl](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/download/v1.0.0/rtl_autobench-1.0.0-py3-none-any.whl)** | Standalone Wheel | ~19 KB |
+| **Source Archive** | 🗜️ **[Download rtl_autobench-1.0.0.tar.gz](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/download/v1.0.0/rtl_autobench-1.0.0.tar.gz)** | Source Code Tarball | ~18 KB |
 
 ---
 
-### Step 2: Download & Install RTL-AutoBench
-
-Choose any of the 3 convenient installation methods:
-
-#### Method A: 1-Line Install directly from GitHub (Recommended)
+### Step 1: Install RTL-AutoBench (1-Line Install)
 No cloning required. Run directly in your terminal:
 ```bash
 pip install git+https://github.com/bendamurimanidhar-cmd/rtl-autobench.git
@@ -40,21 +32,36 @@ pip install git+https://github.com/bendamurimanidhar-cmd/rtl-autobench.git
 uv tool install git+https://github.com/bendamurimanidhar-cmd/rtl-autobench.git
 ```
 
-#### Method B: Clone from Source
-```bash
-# 1. Clone repository
-git clone https://github.com/bendamurimanidhar-cmd/rtl-autobench.git
-cd rtl-autobench
+---
 
-# 2. Activate in editable development mode
-pip install -e .
+### Step 2: Automated EDA Toolchain Setup
+
+RTL-AutoBench features a **native Python NextPnR physical layout & STA engine** that works out of the box with zero dependencies. For full gate synthesis and cycle-accurate simulations, install `iverilog`, `verilator`, and `yosys`:
+
+#### Option A: Auto-Install in 1 Command (Recommended)
+```bash
+# Automatically detects your OS (macOS or Linux) and installs all tools
+rtl-autobench install-eda
 ```
 
-#### Method C: 1-Click Pre-Built Wheel
-Download the `.whl` from [GitHub Releases v1.0.0](https://github.com/bendamurimanidhar-cmd/rtl-autobench/releases/tag/v1.0.0):
+#### Option B: Check Toolchain Health
 ```bash
-pip install rtl_autobench-1.0.0-py3-none-any.whl
+rtl-autobench check-eda
 ```
+
+#### Option C: Manual Installation
+- **macOS (Homebrew):**
+  ```bash
+  brew install iverilog verilator yosys
+  ```
+- **Ubuntu / Debian:**
+  ```bash
+  sudo apt update && sudo apt install -y iverilog verilator yosys
+  ```
+- **Windows:**
+  Install via WSL or MSYS2 (`pacman -S mingw-w64-x86_64-yosys mingw-w64-x86_64-iverilog`).
+
+> **Note:** If an EDA binary is missing, RTL-AutoBench **never crashes**. Testbench generation (`gen-tb`), SVA extraction, and NextPnR layout continue to work 100% out of the box.
 
 ---
 
@@ -103,6 +110,17 @@ Ideal for developers working in VS Code, Sublime, or Vim. Start the file watcher
 rtl-autobench watch ./src
 ```
 *Hit Save (`Cmd+S` / `Ctrl+S`) in your code editor on any `.v` or `.sv` file, and RTL-AutoBench automatically triggers linting, SVA synthesis, and simulations in the background without typing any terminal commands!*
+
+---
+
+### 4. Toolchain Health Check & Automated Setup
+```bash
+# Scan system for all EDA binaries (iverilog, verilator, yosys, nextpnr)
+rtl-autobench check-eda
+
+# Auto-install missing tools via Homebrew (macOS) or APT (Linux)
+rtl-autobench install-eda
+```
 
 ---
 
