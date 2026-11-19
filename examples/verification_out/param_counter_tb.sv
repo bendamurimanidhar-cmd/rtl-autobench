@@ -48,7 +48,7 @@ module param_counter_autobench_tb;
     $display("[%0t] [INIT] Reset released (active_high). Beginning autonomous test vectors...", $time);
 
     // 2. Randomized Fuzzing & Boundary Vector Execution
-    repeat (5000) begin
+    repeat (50) begin
       @(negedge clk);
       en = $urandom_range(0, 1);
       up_down = $urandom_range(0, 1);

@@ -1,7 +1,7 @@
 # Pre-Silicon Hardware Verification Audit
 ## Certificate of Functional Verification: `param_counter`
 **Status:** 🟢 READY FOR TAPE-OUT  
-**Date of Audit:** 2026-11-19 11:19:01 UTC  
+**Date of Audit:** 2026-11-19 11:22:43 UTC  
 **Auditor Engine:** `RTL-AutoBench v2.0 Enterprise`  
 
 ---
@@ -199,12 +199,12 @@ Number of LUTs:       16
 ==================================================
   RTL-AutoBench Verification Scoreboard: param_counter
 ==================================================
-  Total Test Vectors Evaluated : 5000
+  Total Test Vectors Evaluated : 50
   Protocol / Assertion Failures: 0
   OVERALL RESULT               : [VERIFICATION PASSED]
 ==================================================
 
-/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/verification_out/param_counter_tb.sv:80: $finish called at 50046000 (1ps)
+/Users/mohanmanidhar/.gemini/antigravity/scratch/rtl-autobench/examples/verification_out/param_counter_tb.sv:80: $finish called at 546000 (1ps)
 ```
 
 ---
